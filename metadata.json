@@ -1,0 +1,7 @@
+{
+  "name": "DMP. KHO TRỢ LÝ AI.v1",
+  "description": "Nền tảng Marketplace AI chuyên biệt cho thị trường Việt Nam. Khám phá, cài đặt và vận hành các AI Agent quyền năng.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
