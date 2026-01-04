@@ -1,20 +1,20 @@
 
 import React, { useState, Suspense, lazy } from 'react';
-import { AppProvider, useApp } from './contexts/AppContext';
-import { Layout } from './components/Layout';
-import { ToastContainer } from './components/Toast';
+import { AppProvider, useApp } from './contexts/AppContext.tsx';
+import { Layout } from './components/Layout.tsx';
+import { ToastContainer } from './components/Toast.tsx';
 
 // Pre-loading important components
-import { Welcome } from './pages/Welcome';
-import { Marketplace } from './pages/Marketplace';
+import { Welcome } from './pages/Welcome.tsx';
+import { Marketplace } from './pages/Marketplace.tsx';
 
 // Lazy loading secondary components for optimization
-const Workspace = lazy(() => import('./pages/Workspace').then(m => ({ default: m.Workspace })));
-const CreatorStudio = lazy(() => import('./pages/CreatorStudio').then(m => ({ default: m.CreatorStudio })));
-const Settings = lazy(() => import('./pages/Settings').then(m => ({ default: m.Settings })));
-const Analytics = lazy(() => import('./pages/Analytics').then(m => ({ default: m.Analytics })));
-const SupportInfo = lazy(() => import('./pages/SupportInfo').then(m => ({ default: m.SupportInfo })));
-const TopUpModal = lazy(() => import('./components/TopUpModal').then(m => ({ default: m.TopUpModal })));
+const Workspace = lazy(() => import('./pages/Workspace.tsx').then(m => ({ default: m.Workspace })));
+const CreatorStudio = lazy(() => import('./pages/CreatorStudio.tsx').then(m => ({ default: m.CreatorStudio })));
+const Settings = lazy(() => import('./pages/Settings.tsx').then(m => ({ default: m.Settings })));
+const Analytics = lazy(() => import('./pages/Analytics.tsx').then(m => ({ default: m.Analytics })));
+const SupportInfo = lazy(() => import('./pages/SupportInfo.tsx').then(m => ({ default: m.SupportInfo })));
+const TopUpModal = lazy(() => import('./components/TopUpModal.tsx').then(m => ({ default: m.TopUpModal })));
 
 // Loading spinner component
 const LoadingSpinner = () => (
